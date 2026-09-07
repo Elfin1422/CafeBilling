@@ -70,6 +70,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBoxOrdertype = new System.Windows.Forms.ComboBox();
+            this.SubmitOrderbtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listView1
@@ -140,10 +141,10 @@
             // 
             // ReceiptMultiBox
             // 
-            this.ReceiptMultiBox.Location = new System.Drawing.Point(617, 12);
+            this.ReceiptMultiBox.Location = new System.Drawing.Point(575, 12);
             this.ReceiptMultiBox.Multiline = true;
             this.ReceiptMultiBox.Name = "ReceiptMultiBox";
-            this.ReceiptMultiBox.Size = new System.Drawing.Size(171, 282);
+            this.ReceiptMultiBox.Size = new System.Drawing.Size(213, 403);
             this.ReceiptMultiBox.TabIndex = 4;
             this.ReceiptMultiBox.TextChanged += new System.EventHandler(this.ReceiptMultiBox_TextChanged);
             // 
@@ -248,11 +249,23 @@
             this.comboBoxOrdertype.TabIndex = 16;
             this.comboBoxOrdertype.SelectedIndexChanged += new System.EventHandler(this.comboBoxOrdertype_SelectedIndexChanged);
             // 
+            // SubmitOrderbtn
+            // 
+            this.SubmitOrderbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.SubmitOrderbtn.Location = new System.Drawing.Point(340, 285);
+            this.SubmitOrderbtn.Name = "SubmitOrderbtn";
+            this.SubmitOrderbtn.Size = new System.Drawing.Size(120, 43);
+            this.SubmitOrderbtn.TabIndex = 17;
+            this.SubmitOrderbtn.Text = "Submit Order";
+            this.SubmitOrderbtn.UseVisualStyleBackColor = false;
+            this.SubmitOrderbtn.Click += new System.EventHandler(this.SubmitOrderbtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.SubmitOrderbtn);
             this.Controls.Add(this.comboBoxOrdertype);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -294,6 +307,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBoxOrdertype;
+        private System.Windows.Forms.Button SubmitOrderbtn;
     }
 }
 
