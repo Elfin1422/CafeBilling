@@ -41,5 +41,10 @@ namespace CafeBilling
         {
 
         }
+
+        private void FoodQuantiBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
