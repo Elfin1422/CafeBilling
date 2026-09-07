@@ -41,7 +41,7 @@
             "Fries",
             "P50"}, -1);
             System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem(new string[] {
-            "SoftDrink",
+            "Soft Drink",
             "P35"}, -1);
             System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem(new string[] {
             "Iced Tea",
@@ -71,8 +71,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.comboBoxOrdertype = new System.Windows.Forms.ComboBox();
             this.SubmitOrderbtn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Payment = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.PaymentBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -93,6 +92,7 @@
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -122,6 +122,7 @@
             this.listView2.TabIndex = 1;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
+            this.listView2.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged);
             // 
             // columnHeader3
             // 
@@ -252,10 +253,28 @@
             this.comboBoxOrdertype.TabIndex = 16;
             this.comboBoxOrdertype.SelectedIndexChanged += new System.EventHandler(this.comboBoxOrdertype_SelectedIndexChanged);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(256, 250);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(69, 17);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Payment";
+            // 
+            // PaymentBox
+            // 
+            this.PaymentBox.Location = new System.Drawing.Point(400, 249);
+            this.PaymentBox.Name = "PaymentBox";
+            this.PaymentBox.Size = new System.Drawing.Size(121, 20);
+            this.PaymentBox.TabIndex = 19;
+            this.PaymentBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // SubmitOrderbtn
             // 
             this.SubmitOrderbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.SubmitOrderbtn.Location = new System.Drawing.Point(331, 315);
+            this.SubmitOrderbtn.Location = new System.Drawing.Point(340, 285);
             this.SubmitOrderbtn.Name = "SubmitOrderbtn";
             this.SubmitOrderbtn.Size = new System.Drawing.Size(120, 43);
             this.SubmitOrderbtn.TabIndex = 17;
@@ -263,42 +282,14 @@
             this.SubmitOrderbtn.UseVisualStyleBackColor = false;
             this.SubmitOrderbtn.Click += new System.EventHandler(this.SubmitOrderbtn_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "label1";
-            // 
-            // Payment
-            // 
-            this.Payment.AutoSize = true;
-            this.Payment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Payment.Location = new System.Drawing.Point(275, 264);
-            this.Payment.Name = "Payment";
-            this.Payment.Size = new System.Drawing.Size(70, 17);
-            this.Payment.TabIndex = 19;
-            this.Payment.Text = "Payment";
-            // 
-            // PaymentBox
-            // 
-            this.PaymentBox.Location = new System.Drawing.Point(421, 264);
-            this.PaymentBox.Name = "PaymentBox";
-            this.PaymentBox.Size = new System.Drawing.Size(100, 20);
-            this.PaymentBox.TabIndex = 20;
-            this.PaymentBox.TextChanged += new System.EventHandler(this.PaymentBox_TextChanged);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.PaymentBox);
-            this.Controls.Add(this.Payment);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.SubmitOrderbtn);
+            this.Controls.Add(this.PaymentBox);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.comboBoxOrdertype);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -314,7 +305,7 @@
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.listView1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Café Ordering and Billing System";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -341,9 +332,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBoxOrdertype;
         private System.Windows.Forms.Button SubmitOrderbtn;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label Payment;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox PaymentBox;
     }
-}
-
