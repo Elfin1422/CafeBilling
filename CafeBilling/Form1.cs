@@ -17,11 +17,7 @@ namespace CafeBilling
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void FoodBox_TextChanged(object sender, EventArgs e)
         {
 
@@ -43,6 +39,16 @@ namespace CafeBilling
         }
 
         private void FoodQuantiBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxSenior_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxOrdertype_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
