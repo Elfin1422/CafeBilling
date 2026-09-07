@@ -57,5 +57,10 @@ namespace CafeBilling
         {
 
         }
+
+        private void PaymentBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

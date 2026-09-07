@@ -28,28 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "Burger",
             "P85"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "Chicken Sandwich",
             "P75"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
             "Spaghetti",
             "P95"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
             "Fries",
             "P50"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
             "SoftDrink",
             "P35"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
             "Iced Tea",
             "P40"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
             "Coffee",
             "P45"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem16 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem(new string[] {
             "Bottled Water",
             "P25"}, -1);
             this.listView1 = new System.Windows.Forms.ListView();
@@ -71,6 +71,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.comboBoxOrdertype = new System.Windows.Forms.ComboBox();
             this.SubmitOrderbtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Payment = new System.Windows.Forms.Label();
+            this.PaymentBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // listView1
@@ -80,10 +83,10 @@
             this.columnHeader2});
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem9,
-            listViewItem10,
-            listViewItem11,
-            listViewItem12});
+            listViewItem1,
+            listViewItem2,
+            listViewItem3,
+            listViewItem4});
             this.listView1.Location = new System.Drawing.Point(12, 12);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(171, 112);
@@ -109,10 +112,10 @@
             this.columnHeader4});
             this.listView2.HideSelection = false;
             this.listView2.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem13,
-            listViewItem14,
-            listViewItem15,
-            listViewItem16});
+            listViewItem5,
+            listViewItem6,
+            listViewItem7,
+            listViewItem8});
             this.listView2.Location = new System.Drawing.Point(12, 130);
             this.listView2.Name = "listView2";
             this.listView2.Size = new System.Drawing.Size(171, 112);
@@ -252,7 +255,7 @@
             // SubmitOrderbtn
             // 
             this.SubmitOrderbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.SubmitOrderbtn.Location = new System.Drawing.Point(340, 285);
+            this.SubmitOrderbtn.Location = new System.Drawing.Point(331, 315);
             this.SubmitOrderbtn.Name = "SubmitOrderbtn";
             this.SubmitOrderbtn.Size = new System.Drawing.Size(120, 43);
             this.SubmitOrderbtn.TabIndex = 17;
@@ -260,11 +263,41 @@
             this.SubmitOrderbtn.UseVisualStyleBackColor = false;
             this.SubmitOrderbtn.Click += new System.EventHandler(this.SubmitOrderbtn_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "label1";
+            // 
+            // Payment
+            // 
+            this.Payment.AutoSize = true;
+            this.Payment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Payment.Location = new System.Drawing.Point(275, 264);
+            this.Payment.Name = "Payment";
+            this.Payment.Size = new System.Drawing.Size(70, 17);
+            this.Payment.TabIndex = 19;
+            this.Payment.Text = "Payment";
+            // 
+            // PaymentBox
+            // 
+            this.PaymentBox.Location = new System.Drawing.Point(421, 264);
+            this.PaymentBox.Name = "PaymentBox";
+            this.PaymentBox.Size = new System.Drawing.Size(100, 20);
+            this.PaymentBox.TabIndex = 20;
+            this.PaymentBox.TextChanged += new System.EventHandler(this.PaymentBox_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.PaymentBox);
+            this.Controls.Add(this.Payment);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.SubmitOrderbtn);
             this.Controls.Add(this.comboBoxOrdertype);
             this.Controls.Add(this.label6);
@@ -308,6 +341,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBoxOrdertype;
         private System.Windows.Forms.Button SubmitOrderbtn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Payment;
+        private System.Windows.Forms.TextBox PaymentBox;
     }
 }
 
